@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div style={{ padding: '20px' }}>
+      <div>
         <BookAssignmentView />
       </div>
     </ThemeProvider>

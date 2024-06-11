@@ -18,10 +18,12 @@ const BookAssignmentView = () => {
   };
 
   return (
-    <div>
-      <h1>Assign Books to Your Reading List</h1>
-      <h2>Search, select, and manage books for your students' reading enjoyment</h2>
-      <SearchBar onSearch={searchBooks} />
+    <div className='book-assignment-view'>
+      <div className="header">
+        <h1>Assign Books to Your Reading List</h1>
+        <h2>Search, select, and manage books for your students' reading enjoyment</h2>
+        <SearchBar onSearch={searchBooks} />
+      </div>
       <div className="lists-container">
         <BookList books={books} onAdd={addToReadingList} />
         <ReadingList books={readingList} onRemove={removeFromReadingList} />

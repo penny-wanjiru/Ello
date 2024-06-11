@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Button, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const BookCard = ({ book, onAdd }) => {
+  const theme = useTheme()
   let coverImage;
   try {
     coverImage = `/${book.coverPhotoURL}`;
@@ -11,12 +13,12 @@ const BookCard = ({ book, onAdd }) => {
   }
 
   return (
-    <Card style={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
+    <Card style={{ display: 'flex', flexDirection: 'row', height: 200, width: 600, borderRadius: 20, backgroundColor: theme.palette.secondary.white}}>
       <CardMedia
         component="img"
         image={coverImage}
         alt={book.title}
-        style={{ width: '50%', objectFit: 'cover' }}
+        style={{ width: '20%', objectFit: 'cover', borderRadius: 20 }}
       />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <CardContent style={{ flexGrow: 1 }}>
@@ -30,7 +32,11 @@ const BookCard = ({ book, onAdd }) => {
             Reading Level: {book.readingLevel}
           </Typography>
         </CardContent>
-        <Button variant="contained" color="primary" onClick={() => onAdd(book)} style={{ margin: '10px' }}>
+        <Button
+          variant="contained"
+          style={{ backgroundColor: theme.palette.primary.yellow, color: theme.palette.primary.white, margin: '10px' }}
+          onClick={() => onAdd(book)}
+        >
           Add to Reading List
         </Button>
       </div>

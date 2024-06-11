@@ -14,9 +14,10 @@ const BookList = ({ books, onAdd }) => {
 
   return (
     <div className="book-list">
+      <h2>BOOK LIST</h2>
       <Grid container spacing={2} style={{ marginTop: '20px' }}>
         {books.map((book) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={uuidv4()}>
+          <Grid item xs={12} sm={6} key={uuidv4()}>
             <BookCard book={book} onAdd={onAdd} />
           </Grid>
         ))}
