@@ -1,0 +1,27 @@
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.book-list,
+.reading-list {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.reading-list {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .lists-container {
+    flex-direction: column;
+  }
+
+  .book-list,
+  .reading-list {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

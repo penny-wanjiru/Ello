@@ -1,9 +1,17 @@
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import BookAssignmentView from './frontend/pages/BookAssignment';
+import theme from './frontend/theme';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello there</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div style={{ padding: '20px' }}>
+        <BookAssignmentView />
+      </div>
+    </ThemeProvider>
   );
 }
 

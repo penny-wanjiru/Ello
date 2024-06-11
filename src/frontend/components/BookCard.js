@@ -1,29 +1,41 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import React from 'react';
+import { Card, CardContent, CardMedia, Button, Typography } from '@mui/material';
 
-export default function ActionAreaCard() {
+const BookCard = ({ book, onAdd }) => {
+  let coverImage;
+  try {
+    coverImage = `/${book.coverPhotoURL}`;
+  } catch (e) {
+    console.error(`Image not found: /${book.coverPhotoURL}`);
+    coverImage = '';
+  }
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={props.image}
-          alt={props.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {props.title}
+    <Card style={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
+      <CardMedia
+        component="img"
+        image={coverImage}
+        alt={book.title}
+        style={{ width: '50%', objectFit: 'cover' }}
+      />
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <CardContent style={{ flexGrow: 1 }}>
+          <Typography component="h5" variant="h5">
+            {book.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {props.description}
+          <Typography variant="subtitle1" color="textSecondary">
+            {book.author}
+          </Typography>
+          <Typography variant="body2" color="textSecondary">
+            Reading Level: {book.readingLevel}
           </Typography>
         </CardContent>
-      </CardActionArea>
+        <Button variant="contained" color="primary" onClick={() => onAdd(book)} style={{ margin: '10px' }}>
+          Add to Reading List
+        </Button>
+      </div>
     </Card>
   );
-}
+};
+
+export default BookCard;
