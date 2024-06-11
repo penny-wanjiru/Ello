@@ -20,7 +20,7 @@ const BookAssignmentView = () => {
   return (
     <div className='book-assignment-view'>
       <div className="header">
-        <h1>Assign Books to Your Reading List</h1>
+        <h1>Assign Books to Your<br/>Reading List</h1>
         <h2>Search, select, and manage books for your students' reading enjoyment</h2>
         <SearchBar onSearch={searchBooks} />
       </div>

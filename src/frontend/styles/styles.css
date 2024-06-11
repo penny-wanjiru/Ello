@@ -11,42 +11,70 @@
   h1 {
     margin: 0;
     color: #CFFAFA;
+    text-align: center;
+    font-size:50px;
+    font-weight: 900;
+    padding: 20px;
+    line-height: initial;
   }
   h2 {
     margin: 0;
     color: #FFE6DC;
+    font-weight: 100;
+    font-size: 17px;
   }
-
+  .search-button {
+    background-color: #FFE6DC;
+    color: #335C6E;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+  }
+  .search-input {
+    background-color: #ffffff;
+    color: #335C6E;
+    border-radius: 10px;
+    width: 400px;
+  }
 }
+
 
 .lists-container {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-  background-color: #eaebeb;
+  background-color: #ffffff;
   border-radius: 50px;
-}
-
-.book-list,
-.reading-list {
-  flex: 1;
-  margin-right: 10px;
-  margin: 0;
-  padding: 50px;
-}
-
-.reading-list {
-  margin-left: 10px;
-}
-
-@media (max-width: 768px) {
-  .lists-container {
-    flex-direction: column;
+  
+  .book-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: #FFFFFF; /* Replace with the actual value if secondary.white is different */
   }
 
   .book-list,
   .reading-list {
-    margin-right: 0;
-    margin-left: 0;
+    flex: 1;
+    margin-right: 10px;
+    margin: 0;
+    padding: 50px;
   }
+
+  .reading-list {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .lists-container {
+      flex-direction: column;
+    }
+
+    .book-list,
+    .reading-list {
+      margin-right: 0;
+      margin-left: 0;
+  }}
 }
