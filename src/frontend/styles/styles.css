@@ -78,6 +78,14 @@
     margin-left: 10px;
   }
 
+  .reading-list-container {
+    max-height: 50vh; 
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
   @media (max-width: 768px) {
     .lists-container {
       flex-direction: column;
