@@ -36,7 +36,7 @@ const BookCard = ({ book, onAdd }) => {
         </CardContent>
         <Button
           variant="contained"
-          style={{ backgroundColor: theme.palette.primary.yellow, color: theme.palette.primary.white, margin: '10px', width: '85%'  }}
+          style={{ backgroundColor: theme.palette.primary.yellow, color: theme.palette.primary.pastel, margin: '10px', width: '85%'  }}
           onClick={() => onAdd(book)}
         >
           Add to Reading List
