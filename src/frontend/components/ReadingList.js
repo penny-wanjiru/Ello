@@ -15,7 +15,7 @@ const ReadingList = ({ books, onRemove }) => {
             </ListItem>
           ) : (
             books.map((book) => (
-              <ListItem key={book.title}>
+              <ListItem key={book.title} >
                 <ListItemText primary={book.title} secondary={book.author} />
               <ListItemSecondaryAction>
                 <Button variant="contained" style={{ backgroundColor: theme.palette.secondary.orangeRed, color: theme.palette.secondary.pastel }} onClick={() => onRemove(book.title)}>
