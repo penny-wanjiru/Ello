@@ -38,19 +38,48 @@ const theme = createTheme({
     h2: {
       fontSize: '1.5rem',
       '@media (max-width:600px)': {
-        fontSize: '1.2rem',
+        fontSize: '1rem',
+        fontWeight: '600',
       },
       '@media (min-width:960px)': {
         fontSize: '1.25rem',
+        fontWeight: '600',
       },
       '@media (min-width:1280px)': {
         fontSize: '1.4rem',
+        fontWeight: '600',
       },
     },
     h5: {
       fontSize: '1.375rem',
-      '@media (min-width:600px)': {
-        fontSize: '1.5rem',
+      '@media (max-width:600px)': {
+        fontSize: '1rem',
+        fontWeight: '600',
+      },
+      '@media (min-width:960px)': {
+        fontSize: '1.375rem',
+        fontWeight: '600',
+      },
+      '@media (min-width:1280px) and (max-width:1920px)': {
+        fontSize: '1.2rem',
+        fontWeight: '600',
+      },
+
+      '@media (min-width:1920px)': {
+        fontSize: '1.4rem',
+        fontWeight: '600',
+      },
+    },
+    subtitle1: {
+      fontSize: '1rem',
+      '@media (max-width:600px)': {
+        fontSize: '0.6rem',
+      },
+      '@media (min-width:960px)': {
+        fontSize: '1rem',
+      },
+      '@media (min-width:1280px)': {
+        fontSize: '1rem',
       },
     },
     // body1: {

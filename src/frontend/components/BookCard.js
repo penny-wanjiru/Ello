@@ -20,7 +20,7 @@ const BookCard = ({ book, onAdd }) => {
         alt={book.title}
         style={{ width: '20%', objectFit: 'cover', borderRadius: 20, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}
       />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '15px'}}>
+      <div  className="book-card-content">
         <CardContent style={{ flexGrow: 1, width: '80%' }}>
           <Typography component="h5" variant="h5" style={{ fontWeight: 600}}>
             {book.title}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Pagination } from '@mui/material';
+import { Grid, Pagination, Typography } from '@mui/material';
 import BookCard from './BookCard';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -16,7 +16,7 @@ const BookList = ({ books, onAdd }) => {
 
   return (
     <div className="book-list">
-      <h2 variant="h2">BOOK LIST</h2>
+      <Typography variant="h2">BOOK LIST</Typography>
       <Grid container spacing={2} style={{ marginTop: '20px' }}>
         {paginatedBooks.map((book) => (
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6} key={uuidv4()}>
