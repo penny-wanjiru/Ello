@@ -16,10 +16,10 @@ const BookList = ({ books, onAdd }) => {
 
   return (
     <div className="book-list">
-      <h2>BOOK LIST</h2>
+      <h2 variant="h2">BOOK LIST</h2>
       <Grid container spacing={2} style={{ marginTop: '20px' }}>
         {paginatedBooks.map((book) => (
-          <Grid item xs={12} sm={6} key={uuidv4()}>
+          <Grid item xs={12} sm={12} md={12} lg={6} xl={6} key={uuidv4()}>
             <BookCard book={book} onAdd={onAdd} />
           </Grid>
         ))}

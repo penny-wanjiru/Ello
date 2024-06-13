@@ -12,22 +12,24 @@
     margin: 0;
     color: #CFFAFA;
     text-align: center;
-    font-size:50px;
     font-weight: 900;
     padding: 20px;
     line-height: initial;
   }
+
   h2 {
     margin: 0;
     color: #FFE6DC;
     font-weight: 100;
-    font-size: 17px;
   }
+  .header-subtitle {
+    text-align: center;
+  }
+
   .search-button {
     background-color: #FFE6DC;
     color: #335C6E;
     border-radius: 10px;
-    /* padding: 10px 20px; */
   }
   .search-input {
     background-color: #ffffff;
@@ -44,8 +46,7 @@
   padding: 50px;
   background-color: #ffffff;
   border-radius: 50px 50px 0 0;
-  /* min-height: 100vh; */
-  position: relative;
+  /* position: relative; */
   
   .book-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -86,14 +87,47 @@
     padding: 10px;
   }
 
-  @media (max-width: 768px) {
+  /* Mobile  */
+  @media (max-width: 600px) {
     .lists-container {
       flex-direction: column;
     }
-
+    .book-card {
+      height: 150px;
+      width: 100%;
+    }
+    .book-list {
+      flex-direction: column;
+    }
     .book-list,
     .reading-list {
-      margin-right: 0;
-      margin-left: 0;
-  }}
+      width: 50%;
+    }
+  }
+  /* Desktop */
+  @media (max-width: 768px) {
+    .lists-container {
+      flex-direction: row;
+    }
+    .book-card {
+      height: 150px;
+      width: 100%;
+    }
+  }
+  /* Large Screen */
+  @media (min-width: 1200px) {
+    .lists-container {
+      flex-direction: row;
+    }
+    .book-card {
+      height: 200px;
+      width: 80%;
+    }
+    .book-list,
+    .reading-list {
+      width: 100%;
+    }
+  }
+
+  
 }

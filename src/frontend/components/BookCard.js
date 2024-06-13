@@ -22,7 +22,7 @@ const BookCard = ({ book, onAdd }) => {
       />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '15px'}}>
         <CardContent style={{ flexGrow: 1, width: '80%' }}>
-          <Typography component="h5" variant="h5" style={{ fontWeight: 600, fontSize: '1.375rem' }}>
+          <Typography component="h5" variant="h5" style={{ fontWeight: 600}}>
             {book.title}
           </Typography>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingTop: '3px' }}>

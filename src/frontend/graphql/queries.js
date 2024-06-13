@@ -10,5 +10,3 @@ export const GET_BOOKS = gql`
     }
   }
 `;
-
-console.log({GET_BOOKS});
