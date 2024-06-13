@@ -37,7 +37,7 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 You should get a page like this:
-![Screenshot](MarkdownImgs/ello.png)
+![Screenshot](MDImg/ello.png)
 
 ## Usage
 - Search Books: Use the search bar at the top to find books.
