@@ -18,7 +18,7 @@ const BookCard = ({ book, onAdd }) => {
         component="img"
         image={coverImage}
         alt={book.title}
-        style={{ width: '20%', objectFit: 'cover', borderRadius: 20, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}
+        className='book-card-image'
       />
       <div  className="book-card-content">
         <CardContent style={{ flexGrow: 1, width: '80%' }}>
@@ -36,7 +36,8 @@ const BookCard = ({ book, onAdd }) => {
         </CardContent>
         <Button
           variant="contained"
-          style={{ backgroundColor: theme.palette.primary.yellow, color: theme.palette.primary.pastel, margin: '10px', width: '85%'  }}
+          className='book-card-button'
+          style={{ backgroundColor: theme.palette.primary.yellow, color: theme.palette.primary.pastel }}
           onClick={() => onAdd(book)}
         >
           Add to Reading List

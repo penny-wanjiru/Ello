@@ -1,12 +1,12 @@
 import React from 'react';
-import { List, ListItem, ListItemText, Button, ListItemSecondaryAction } from '@mui/material';
+import { List, ListItem, ListItemText, Button, ListItemSecondaryAction, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 const ReadingList = ({ books, onRemove }) => {
   const theme = useTheme();
   return (
     <div className="reading-list">
-      <h2>READING LIST</h2>
+      <Typography variant="h2">READING LIST</Typography>
       <div className='reading-list-container'>
         <List>
           {books.length === 0 ? (
