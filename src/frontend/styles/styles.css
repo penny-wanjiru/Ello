@@ -1,46 +1,53 @@
 .book-assignment-view {
   background-color: #335C6E;
   height: 100vh;
+
+
+  .header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+      color: #CFFAFA;
+      text-align: center;
+      font-weight: 900;
+      padding: 20px;
+      line-height: initial;
+    }
+
+    h2 {
+      margin: 0;
+      color: #FFE6DC;
+    }
+
+    .header-subtitle {
+      text-align: center;
+      font-weight: 100;
+    }
+
+    .search-button {
+      background-color: #FFE6DC;
+      color: #335C6E;
+      border-radius: 10px;
+    }
+    .search-input {
+      background-color: #ffffff;
+      color: #335C6E;
+      border-radius: 10px;
+      width: 400px;
+    }
+    .search-bar {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
 }
-
-.header {
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    margin: 0;
-    color: #CFFAFA;
-    text-align: center;
-    font-weight: 900;
-    padding: 20px;
-    line-height: initial;
-  }
-
-  h2 {
-    margin: 0;
-    color: #FFE6DC;
-  }
-
-  .header-subtitle {
-    text-align: center;
-    font-weight: 100;
-  }
-
-  .search-button {
-    background-color: #FFE6DC;
-    color: #335C6E;
-    border-radius: 10px;
-  }
-  .search-input {
-    background-color: #ffffff;
-    color: #335C6E;
-    border-radius: 10px;
-    width: 400px;
-  }
-}
-
 
 .lists-container {
   display: flex;
@@ -86,13 +93,12 @@
     padding: 50px;
   }
   .pagination {
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    position: fixed;
     bottom: 0;
-    width: 50%;
+    /* width: 50%; */
   }
 
   .reading-list {
@@ -112,6 +118,10 @@
   @media (max-width: 600px) {
     .lists-container {
       flex-direction: column;
+    }
+    .search-bar {
+      width: 50%;
+      max-width: 500px;
     }
     .book-card {
       height: 150px;
@@ -134,6 +144,10 @@
     .lists-container {
       flex-direction: column;
     }
+    .search-bar {
+      width: 60%;
+      max-width: 500px;
+    }
     .book-card {
       height: 150px;
       width: 100%;
@@ -147,6 +161,15 @@
 
   /* Medium Screen */
   @media (min-width: 1280px) and (max-width: 1920px) {
+    .book-assignment-view {
+      .header {
+        padding: 10px;
+        .search-bar {
+          width: 80%;
+          max-width: 500px;
+        }
+      }
+    }
     .lists-container {
       flex-direction: column;
     }

@@ -10,7 +10,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div style={{ margin: '20px 0', display: 'flex', justifyContent: 'center' }}>
+    <div className='search-bar'>
       <TextField
         label="Search for a book"
         variant= "filled"

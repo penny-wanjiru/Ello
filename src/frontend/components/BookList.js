@@ -30,7 +30,6 @@ const BookList = ({ books, onAdd }) => {
           page={page}
           onChange={handlePageChange}
           color="primary"
-          style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}
         />
       </div>
     </div>

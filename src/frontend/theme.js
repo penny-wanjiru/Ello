@@ -31,7 +31,10 @@ const theme = createTheme({
       '@media (min-width:960px)': {
         fontSize: '2.5rem',
       },
-      '@media (min-width:1280px)': {
+      '@media (min-width:1280px) and (max-width:1920px)': {
+        fontSize: '2.9rem',
+      },
+      '@media (min-width:1920px)': {
         fontSize: '3.5rem',
       },
     },
@@ -46,12 +49,12 @@ const theme = createTheme({
         fontWeight: '600',
       },
       '@media (min-width:1280px) and (max-width:1920px)': {
-        fontSize: '1.2rem',
+        fontSize: '1rem',
         fontWeight: '600',
       },
 
       '@media (min-width:1920px)': {
-        fontSize: '1.4rem',
+        fontSize: '1.2rem',
         fontWeight: '600',
       },
     },
