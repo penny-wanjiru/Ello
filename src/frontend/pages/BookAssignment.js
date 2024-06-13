@@ -9,8 +9,6 @@ import useBooks from '../hooks/useBooks';
 import '../styles/styles.css';
 
 const BookAssignmentView = () => {
-  // const theme = useTheme();
-  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { books, searchBooks } = useBooks();
   const [readingList, setReadingList] = useState([]);
   const [open, setOpen] = useState(false);
